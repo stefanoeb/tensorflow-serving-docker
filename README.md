@@ -1,16 +1,7 @@
-# credit-prediction-meucrediario
+# Tensorflow serving Docker
 
-Credit prediction engine for MeuCrediario (Docker + Tensorflow)
-
-## Installing
-
-Este projeto usa docker para criar um container com todas as dependências (é um monte), então só precisa ter Docker instalado.
+Building a docker container with tensorflow-serving from source (CPU distribution)
 
 ## Building
 
-* `docker build -t credit-prediction-meucrediario .`: Monta a imagem e serve o modelo na porta xxxx da sua máquina.
-
-## CI
-
-CircleCI (WIP)
-
+* `make build`: Builds the docker image. Note that this may take hours (2.5hr on a MBP 2017 i5) and make sure you have at least 10gb of disk space. **Important note: Make sure your docker daemon have at least 4GB to use (default is 2gb) otherwise compilation will fail**
